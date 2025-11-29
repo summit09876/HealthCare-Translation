@@ -4,8 +4,6 @@ import { HistoryItem } from './components/HistoryItem';
 import { DEFAULT_SOURCE_LANG, DEFAULT_TARGET_LANG } from './constants';
 import { Language, AppState, Message, TranslationResult } from './types';
 import { translateText } from './services/geminiService';
-import { Analytics } from '@vercel/analytics/next';
-
 
 declare global {
   interface Window {
@@ -324,7 +322,6 @@ export default function App() {
           </button>
         </div>
       </div>
-       <Analytics />
     </div>
   );
 }
