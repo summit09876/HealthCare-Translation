@@ -4,6 +4,8 @@ import { HistoryItem } from './components/HistoryItem';
 import { DEFAULT_SOURCE_LANG, DEFAULT_TARGET_LANG } from './constants';
 import { Language, AppState, Message, TranslationResult } from './types';
 import { translateText } from './services/geminiService';
+import { Analytics } from '@vercel/analytics/next';
+
 
 declare global {
   interface Window {
@@ -161,7 +163,7 @@ export default function App() {
 
   return (
     <div className="flex flex-col h-screen bg-slate-50 bg-grid-pattern text-slate-800 font-sans overflow-hidden selection:bg-medical-200">
-      
+       <Analytics />
       {/* Fixed Header with Options */}
       <header className="fixed top-0 left-0 right-0 z-30 glass-nav border-b border-slate-200 shadow-sm transition-all duration-300">
         <div className="max-w-3xl mx-auto px-4 py-3">
