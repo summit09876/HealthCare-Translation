@@ -1,0 +1,7 @@
+{
+  "name": "Healthcare Translation",
+  "description": "Real-time multilingual medical translation application connecting patients and healthcare providers using Gemini and Web Speech API.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
